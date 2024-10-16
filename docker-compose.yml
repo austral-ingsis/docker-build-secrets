@@ -1,0 +1,14 @@
+services:
+  api:
+    build:
+      secrets:
+        - github_token
+      context: .
+    container_name: docker-secrets
+    environment:
+      EXAMPLE_RUNTIME_ENV_VAR: "example runtime env var"
+
+
+secrets:
+  github_token:
+    environment: GITHUB_TOKEN
